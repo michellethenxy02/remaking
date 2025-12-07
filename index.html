@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>再造新城：氣候變遷下「半都市地帶」的空權治理與價值協商</title>
-
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         :root {
             --primary-color: #2c5f7d;
@@ -267,6 +267,16 @@
         .location-map {
             width: 100%;
             height: 300px;
+            background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
         }
 
         .location-content {
@@ -373,12 +383,31 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-links { gap: 1rem; font-size: 0.9rem; }
-            .hero h1 { font-size: 1.8rem; }
-            .hero .subtitle { font-size: 1rem; }
-            .location-grid, .method-grid { grid-template-columns: 1fr; }
-            .section { padding: 2rem 1.5rem; }
-            .container { padding: 2rem 1rem; }
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .location-grid,
+            .method-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 2rem 1.5rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
         }
 
         /* Progress Bar */
@@ -427,7 +456,7 @@
             <section class="section">
                 <h2 class="section-title">歡迎來到再造新城研究計畫</h2>
                 <p style="font-size: 1.2rem; line-height: 2;">本研究聚焦於東亞半都市化地帶的新市鎮，以臺灣林口、橋頭為主要案例，探討在新一波科技產能與軌道擴張計畫驅動下，這些地區的願景想像、空權治理模式與價值協商如何共同形塑其都市化轉型。</p>
-
+                
                 <div class="method-grid" style="margin-top: 3rem;">
                     <div class="method-card">
                         <div class="method-icon">🎯</div>
@@ -454,10 +483,27 @@
         <div class="container">
             <section class="section">
                 <h2 class="section-title">研究介紹</h2>
-                <!-- 研究介紹內容保持不變 -->
+                
                 <h3 class="section-subtitle">研究主旨</h3>
                 <p>我們是國立政治大學創新國際學院之國家科學及技術委員會研究計畫《再造新城：氣候變遷下「半都市地帶」的空權治理與價值協商》研究團隊。本研究聚焦於東亞半都市化地帶的新市鎮，以臺灣林口、橋頭為主要案例，並輔以韓國龍仁、日本熊本進行跨區域比較。我們將探討在新一波科技產能與軌道擴張計畫驅動下，這些地區的願景想像、空權治理模式與價值協商如何共同形塑其都市化轉型。</p>
-                <!-- 其餘內容省略，保持原本即可 -->
+                
+                <p style="margin-top: 1.5rem;">本研究計畫主要將結合半都市化地帶研究、價值化研究及永續發展模式，構建分析空權治理中之價值協商的跨學科框架，以空氣的多重物質樣態如容積、碳排放與呼吸權為切入點，解析氣候變遷下都市化過程的價值動態協商，回應全球「衛星都市化」的理論對話。</p>
+
+                <h3 class="section-subtitle">研究的SDG價值</h3>
+                <div class="sdg-badge">🎯 SDG 11：永續城市與社區</div>
+                <p>本研究的核心問題是正視快速都市化作為氣候變遷政策盲點，尤其是東亞在新一波科技、軌道造鎮過程中面臨的淨零轉型挑戰，以呼應永續發展目標 11 之細項 11.a「透過加強國家和區域發展規劃，促進城市、郊區與農村地區之間，經濟、社會和環境的正向連結」。</p>
+
+                <h3 class="section-subtitle">臺灣都市發展面臨的挑戰</h3>
+                <p>在臺灣，近二十年來的都市與區域政策，甚至包括 2050 年淨零排放的「十二項關鍵戰略」，均尚未對快速都市化現象提出結構性地減排策略。政府的氣候行動多聚焦於「綠色消費」（如綠建材應用）或大眾運輸系統的擴張，卻忽略了快速都市化─尤其是水平與垂直都市擴張─對碳排放的根本影響。</p>
+                
+                <p style="margin-top: 1rem;">從都市建築到造鎮與交通建設，這些政策皆以「擴張」與「成長」為前提，但對其背後的碳排放機制缺乏實質檢討。都市化政策作為臺灣氣候行動裡被忽略的「房間裡的大象」，亟待系統性地檢視、反映於既有都市化政策工具的改革上（陳虹穎, 2023）。</p>
+
+                <h3 class="section-subtitle">核心研究問題</h3>
+                <div class="research-question">
+                    <p><strong>本研究提出下列發問：</strong></p>
+                    <p>當前臺灣新一波由交通基礎建設、科技產業擴張競爭、房貸資金收放之下，共構的新市鎮空間生產邏輯與過程，如何銜接上淨零都市轉型？空權治理對於造鎮過程、居住經驗有何影響？在什麼介面、物質基礎上發生交集？不同行動者如何理解都市氣候與量體治理的關係？</p>
+                    <p style="margin-top: 1rem;">透過探索政府機構、環境行動者、不動產開發業者與新城鎮住民們如何評估、投資、參與形塑這些半都市地帶，幫助我們看見容積管理、空氣品質與碳排管制之治理，如何協商環境、經濟與社會等價值競逐。在此計畫中，筆者試圖聚焦於半都市化地帶的「邊界空間」（border/boundary space），探問這些空間界線的僭越、取消、交疊等動態過程，並理解市民社會在容積總量管制、碳排放管制與空氣品質管制過程中可能的角色。</p>
+                </div>
             </section>
         </div>
     </div>
@@ -467,7 +513,7 @@
         <div class="container">
             <section class="section">
                 <h2 class="section-title">研究地點（案例）</h2>
-
+                
                 <div class="location-grid">
                     <!-- 林口 -->
                     <div class="location-card">
@@ -475,11 +521,21 @@
                             <h3>林口新市鎮</h3>
                             <p>新北市林口區</p>
                         </div>
-                        <div id="lin-kou-map" class="location-map"></div>
+                        <div class="location-map">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28919.77249738879!2d121.35762842406876!3d25.078076984344577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7b5b7e7b7b7%3A0x7b7b7b7b7b7b7b7b!2z5p6X5Y-j5paw5biC6Y6u!5e0!3m2!1szh-TW!2stw!4v1234567890123!5m2!1szh-TW!2stw" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
                         <div class="location-content">
                             <h4>📍 地理位置與發展</h4>
                             <p>林口新市鎮位於新北市西北側，鄰近桃園國際機場，是臺灣第三個新市鎮開發案。自1970年代規劃至今，歷經多次開發階段，近年因機場捷運通車、A7站區開發及產業園區進駐，快速轉型為科技與物流產業聚集地，人口大幅成長。</p>
-
+                            
                             <h4>🎯 選擇原因</h4>
                             <ul>
                                 <li>典型的半都市化地帶，介於臺北都會區與桃園之間</li>
@@ -487,7 +543,7 @@
                                 <li>科技產業進駐改變地方發展型態</li>
                                 <li>容積管制與空氣品質議題顯著</li>
                             </ul>
-
+                            
                             <h4>📊 資料蒐集</h4>
                             <ul>
                                 <li>都市計畫與容積管制檔案</li>
@@ -505,11 +561,21 @@
                             <h3>橋頭新市鎮</h3>
                             <p>高雄市橋頭區</p>
                         </div>
-                        <div id="qiao-tou-map" class="location-map"></div>
+                        <div class="location-map">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14637.842634267849!2d120.29940937430337!3d22.758461084978447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0324d7b7b7b7%3A0x7b7b7b7b7b7b7b7b!2z6auY6ZuE5biC5qmL6aCt5Y2A!5e0!3m2!1szh-TW!2stw!4v1234567890123!5m2!1szh-TW!2stw" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
                         <div class="location-content">
                             <h4>📍 地理位置與發展</h4>
                             <p>橋頭新市鎮位於高雄市北側，是臺灣第四個新市鎮開發案。自2000年代啟動開發，配合高雄捷運紅線延伸、臺鐵地下化及橋頭科學園區設立，成為南臺灣重要的產業與居住發展區域，呈現快速的半都市化特徵。</p>
-
+                            
                             <h4>🎯 選擇原因</h4>
                             <ul>
                                 <li>南臺灣代表性的新市鎮開發案例</li>
@@ -517,7 +583,7 @@
                                 <li>氣候變遷下的熱島效應明顯</li>
                                 <li>農地轉型與價值協商過程典型</li>
                             </ul>
-
+                            
                             <h4>📊 資料蒐集</h4>
                             <ul>
                                 <li>新市鎮開發計畫文件</li>
@@ -537,8 +603,66 @@
     <div id="page-methodology" class="page">
         <div class="container">
             <section class="section">
-                <h2 class="section-title">研究方法</h2>
-                <!-- 方法介紹保持原樣 -->
+                <h2 class="section-title">工具／研究方法</h2>
+                
+                <h3 class="section-subtitle">研究方法簡介</h3>
+                <p>本研究採用跨學科整合研究方法，結合質性與量化途徑，以全面理解半都市地帶的空權治理與價值協商過程。我們運用多元研究工具與資料來源，從不同尺度和視角探討新市鎮的都市化轉型與永續發展議題。</p>
+
+                <div class="method-grid">
+                    <div class="method-card">
+                        <div class="method-icon">📋</div>
+                        <h3>深度訪談</h3>
+                        <p>針對政府官員、不動產開發業者及當地居民進行半結構式訪談，探討不同利害關係人對空權治理的理解與價值判斷。</p>
+                    </div>
+
+                    <div class="method-card">
+                        <div class="method-icon">🔍</div>
+                        <h3>參與式觀察</h3>
+                        <p>長期駐點於研究場域，觀察日常生活實踐、社區互動、都市發展過程，以及環境變遷對居民生活的影響，記錄第一手的民族誌資料。</p>
+                    </div>
+
+                    <div class="method-card">
+                        <div class="method-icon">📊</div>
+                        <h3>空間資料分析</h3>
+                        <p>運用 GIS 地理資訊系統分析土地使用變遷、容積分布、交通網絡、綠地配置等空間數據，視覺化呈現都市化過程與環境變遷。</p>
+                    </div>
+
+                    <div class="method-card">
+                        <div class="method-icon">📈</div>
+                        <h3>環境數據分析</h3>
+                        <p>蒐集並分析空氣品質、碳排放、氣溫變化等環境監測數據，評估快速都市化對環境品質的影響，並與政策目標進行對比。</p>
+                    </div>
+
+                    <div class="method-card">
+                        <div class="method-icon">📄</div>
+                        <h3>政策文本分析</h3>
+                        <p>系統性檢視都市計畫、環境影響評估、氣候行動計畫等政策文件，分析空權治理的制度框架與價值協商機制。</p>
+                    </div>
+
+                    <div class="method-card">
+                        <div class="method-icon">🌏</div>
+                        <h3>跨區域比較</h3>
+                        <p>與韓國龍仁、日本熊本等東亞案例進行比較研究，探討不同文化與制度脈絡下的半都市化發展模式與永續轉型路徑。</p>
+                    </div>
+                </div>
+
+                <h3 class="section-subtitle" style="margin-top: 3rem;">採用的工具、模型與資料庫</h3>
+                <div class="method-grid">
+                    <div class="method-card">
+                        <h3>🗺️ GIS 空間分析工具</h3>
+                        <p>QGIS、ArcGIS 進行空間資料處理與視覺化</p>
+                    </div>
+
+                    <div class="method-card">
+                        <h3>📐 都市模擬模型</h3>
+                        <p>容積率計算模型、碳排放估算工具</p>
+                    </div>
+
+                    <div class="method-card">
+                        <h3>💾 資料庫與開放資料</h3>
+                        <p>政府開放資料平台、環保署空氣品質監測網、內政部不動產交易實價登錄</p>
+                    </div>
+                </div>
             </section>
         </div>
     </div>
@@ -548,65 +672,95 @@
         <div class="container">
             <section class="section">
                 <h2 class="section-title">研究團隊</h2>
-                <!-- 團隊介紹保持原樣 -->
+                
+                <div class="team-lead">
+                    <h3>👨‍🏫 計畫主持人</h3>
+                    <p><strong>陳虹穎 助理教授</strong></p>
+                    <p>國立政治大學創新國際學院</p>
+                    <p>研究專長：都市社會學、環境人類學、空間治理、永續發展</p>
+                </div>
+
+                <h3 class="section-subtitle">研究團隊成員</h3>
+                <p style="margin-bottom: 2rem;">本研究團隊由跨領域專家組成，包括都市規劃、傳播、地政、土地管理、中東研究等領域的研究人員，共同致力於探討半都市地帶的永續發展議題。</p>
+
+                <div class="method-grid">
+                    <div class="method-card">
+                        <div class="method-icon">👩‍🎓</div>
+                        <h3>鄧芯怡</h3>
+                        <p>傳播碩士班二年級</p>
+                    </div>
+                    <div class="method-card">
+                        <div class="method-icon">👩‍🎓</div>
+                        <h3>陳亞晴</h3>
+                        <p>地政碩士班一年級</p>
+                    </div>
+                    <div class="method-card">
+                        <div class="method-icon">👩‍🎓</div>
+                        <h3>林佳瑢</h3>
+                        <p>地政碩士班一年級</p>
+                    </div>
+                    <div class="method-card">
+                        <div class="method-icon">👨‍🎓</div>
+                        <h3>羅嘉慶</h3>
+                        <p>土地碩士在職專班三年級</p>
+                    </div>
+                    <div class="method-card">
+                        <div class="method-icon">👨‍🎓</div>
+                        <h3>林謙</h3>
+                        <p>中東碩士班一年級</p>
+                    </div>
+                </div>
             </section>
         </div>
     </div>
 
     <footer>
         <div class="footer-content">
-            <p>© 2025 再造新城研究計畫 | 國立政治大學創新國際學院</p>
-            <p>聯絡信箱: info@example.com</p>
+            <p><strong>國立政治大學創新國際學院</strong></p>
+            <p>國家科學及技術委員會研究計畫</p>
+            <p style="margin-top: 1rem; opacity: 0.7;">© 2024 再造新城研究計畫</p>
         </div>
     </footer>
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
     <script>
-        // Page Switching
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById('page-' + pageId).classList.add('active');
-            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-            document.querySelector('.nav-links a[onclick="showPage(\'' + pageId + '\')"]').classList.add('active');
+        // Page navigation function
+        function showPage(pageName) {
+            console.log('Switching to page:', pageName); // Debug
+            
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            const targetPage = document.getElementById('page-' + pageName);
+            console.log('Target page:', targetPage); // Debug
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            
+            // Update active nav link
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active class to clicked link
+            if (window.event && window.event.target) {
+                window.event.target.classList.add('active');
+            }
+            
+            // Scroll to top smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Scroll Progress Bar
-        window.addEventListener('scroll', function() {
+        // Scroll progress bar
+        window.addEventListener('scroll', () => {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrolled = (winScroll / height) * 100;
-            document.getElementById('progressBar').style.width = scrolled + "%";
-        });
-
-        // JSON 地點資料
-        const locationData = [
-            {
-                id: "lin-kou-map",
-                name: "林口新市鎮",
-                lat: 25.0785,
-                lng: 121.3671,
-                description: "新北市林口區，鄰近桃園機場"
-            },
-            {
-                id: "qiao-tou-map",
-                name: "橋頭新市鎮",
-                lat: 22.7240,
-                lng: 120.3025,
-                description: "高雄市橋頭區"
-            }
-        ];
-
-        // 生成 Leaflet 地圖
-        locationData.forEach(loc => {
-            const map = L.map(loc.id).setView([loc.lat, loc.lng], 13);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© OpenStreetMap contributors'
-            }).addTo(map);
-            L.marker([loc.lat, loc.lng]).addTo(map)
-                .bindPopup(`<b>${loc.name}</b><br>${loc.description}`)
-                .openPopup();
+            document.getElementById('progressBar').style.width = scrolled + '%';
         });
     </script>
 </body>
